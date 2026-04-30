@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe App</title>
+    <link rel="stylesheet" href="style-recipe.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <span id="close">&times;</span>
+        <h2 id="recipeTitle"></h2>
+        <p id="recipeDetails">Recipe details will appear here...</p>
+    </div>
+</div>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="navbar-items">  
+                <a href="#">
+                    <img src="Logo.png" alt="Logo">
+                </a>
+                <a href="#" class="menu-bar">My Recipe Book</a>
+            </div>
+            <div class="menu">
+                <a href="#">Home</a>
+                <a href="#">About Us</a>
+                <a href="#">Contact Us</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="hero">
+            <div class="hero-text">
+                <p>Discover the taste of tomorrow</p>
+                <pre><span style="font-style: italic;"> curated recipes, effortless cooking, </span></pre> 
+                <p>and inspiration at your fingertips.</p>
+                <div class="search-section">
+                    <input placeholder="Search recipe..">
+                    <div class="searchbtn">
+                        <button>Search</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="items-menu">
+            <h3>CUISINE MENU</h3>
+            <div class="cuisine">
+                <div class="item1">
+                    <a href="italian_cuisine.html">
+                        <img src="italian.jpg" alt="italian">
+                        <p>Italian</p>
+                    </a>
+                </div>
+                <div class="item1">
+                    <a href="#">
+                        <img src="japanese.jpg" alt="Japanese">
+                        <p>Japanese</p>
+                    </a>
+                </div>
+                <div class="item1">
+                    <a href="#">
+                        <img src="mexican.jpg" alt="Mexican">
+                        <p>Mexican</p>
+                    </a>
+                </div>
+                <div class="item1">
+                    <a href="#">
+                        <img src="american.jpg" alt="American">
+                        <p>American</p>
+                    </a>
+                </div>
+                <div class="item1">
+                    <a href="#">
+                        <img src="french.jpg" alt="French">
+                        <p>French</p>
+                    </a>
+                </div>
+                <div class="item1">
+                    <a href="#">
+                        <img src="spanish.jpg" alt="Spanish">
+                        <p>Spanish</p>
+                    </a>
+                </div>
+                <div class="item1">
+                    <a href="#">
+                        <img src="thai.jpg" alt="Thai">
+                        <p>Thai</p>
+                    </a>
+                </div>
+                <div class="item1">
+                    <a href="#">
+                        <img src="indian.jpg" alt="Indian">
+                        <p>Indian</p>
+                    </a>
+                </div>
+                <div class="item1">
+                    <a href="#">
+                        <img src="arab.jpg" alt="Arab">
+                        <p>Arab</p>
+                    </a>
+                </div>
+                <div class="item1">
+                    <a href="#">
+                        <img src="african.jpg" alt="African">
+                        <p>African</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="add-recipe-section">
+            <h2>Add Your Recipe</h2>
+            <input id="recipeInput" placeholder="Recipe name">
+            <input id="imageInput" placeholder="Image URL">
+            <textarea id="ingredientsInput" placeholder="Ingredients"></textarea>
+            <textarea id="stepsInput" placeholder="How to make (steps)"></textarea>
+            <button onclick="addRecipe()">Add Recipe</button>
+        </div>
+        <div class="recipe-title">
+            <h3>FEATURED RECIPES</h3>
+        </div>
+        <div class="recipe-menu">
+            <div class="recipe">
+                <img src="smoked.jpg" alt="salad">
+                <p>Smoked Salmon Lyonnaise Salad</p>
+                <button class="recipe-btn">View recipe</button>
+            </div>
+            <div class="recipe">
+                <img src="meatballs.jpg" alt="Albondigas">
+                <p>Albondigas</p>
+                <button class="recipe-btn">View recipe</button>
+            </div>
+            <div class="recipe">
+                <img src="chicken.jpg" alt="Chicken fried steak">
+                <p>Chicken fried steak</p>
+                <button class="recipe-btn">View recipe</button>
+            </div>
+            <div class="recipe">
+                <img src="Sushi.jpg" alt="Sushi">
+                <p>Sushi</p>
+                <button class="recipe-btn">View recipe</button>
+            </div>
+            <div class="recipe">
+                <img src="Chicken tikka masala.jpg" alt="Chicken tikka masala">
+                <p>Chicken tikka masala</p>
+                <button class="recipe-btn">View recipe</button>
+            </div>
+            <div class="recipe">
+                <img src="Bangkok-style Drunken Noodles.jpg" alt="Bangkok-style Drunken Noodles">
+                <p>Bangkok-style Drunken Noodles</p>
+                <button class="recipe-btn">View recipe</button>
+            </div>
+        </div>
+        <h3 style="text-align:center; margin-top:40px;">YOUR RECIPES</h3>
+
+        <div class="recipe-menu" id="userRecipes">
+            <!-- Dynamic recipes will come here -->
+        </div>
+</main>
+<footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-section">
+            <h2>🍽 RecipeHub</h2>
+            <p>Discover delicious recipes from around the world. Cook smarter, eat better, and enjoy every bite.</p>
+        </div>
+
+        
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Recipes</a></li>
+                <li><a href="#">Cuisines</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+
+        
+        <div class="footer-section">
+            <h3>Contact</h3>
+            <p>Email: recipehub@gmail.com</p>
+            <p>Phone: +91 98765 43210</p>
+            <p>Location: India</p>
+        </div>
+
+        
+        <div class="footer-section">
+            <h3>Subscribe</h3>
+            <input type="email" placeholder="Enter your email">
+            <button>Subscribe</button>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 RecipeHub | Designed by You 🚀</p>
+    </div>
+</footer>
+<script src="script_recipe.js"></script>
+</body>
+</html>
